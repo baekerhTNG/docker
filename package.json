@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev":   "mkdir -p dist; cp ./src/static/* ./dist/; tsc && node ./dist/server.js",
-    "build": "mkdir -p dist; cp ./src/static/* ./dist/; tsc"
+    "build": "tsc"
   },
   "keywords": [],
   "author": "",
