@@ -1,9 +1,9 @@
-FROM node:20-alpine
-WORKDIR /usr/src/app
-COPY . .
-RUN npm install
-RUN mkdir -p /usr/src/app/dist
-RUN cp -r /usr/src/app/src/static/* /usr/src/app/dist/
-RUN npm run build
-EXPOSE 3000
-CMD ["node", "dist/server.js"]
+# 1 choose base image, see https://hub.docker.com/search?q=&type=image&image_filter=official
+# 2 set workdir to /usr/src/app
+# 3 copy all files to workdir
+# 4 install node dependencies
+# 5 create dist folder inside workdir
+# 6 copy static files to dist folder
+# 7 build the project using tsc
+# 8 expose port 3000
+# 9 run the server
